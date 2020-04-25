@@ -5,6 +5,7 @@ class AppDimen {
   static final double H_DIMEN_360 = 85.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_350 = 79.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_300 = 70.92 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_270 = 69.10 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_250 = 59.10 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_200 = 47.28 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_180 = 42.55 * SizeConfig.safeBlockHorizontal;
@@ -40,6 +41,7 @@ class AppDimen {
   static final double V_DIMEN_450 = 57.98 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_400 = 51.55 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_350 = 45.10 * SizeConfig.safeBlockVertical;
+  static final double V_DIMEN_320 = 40.66 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_300 = 38.66 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_250 = 33 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_230 = 29.12 * SizeConfig.safeBlockVertical;
@@ -99,5 +101,6 @@ class AppDimen {
   static final double TEXT_SIZE_24 = 5.4 * SizeConfig.safeBlockHorizontal;
   static final double TEXT_SIZE_26 = 6.15 * SizeConfig.safeBlockHorizontal;
   static final double TEXT_SIZE_30 = 6.97 * SizeConfig.safeBlockHorizontal;
+  static final double TEXT_SIZE_35 = 7.97 * SizeConfig.safeBlockHorizontal;
   static final double TEXT_SIZE_40 = 8.16 * SizeConfig.safeBlockHorizontal;
 }

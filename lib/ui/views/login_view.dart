@@ -31,7 +31,12 @@ class _LogInState extends State<LogIn> {
     return Scaffold(
       backgroundColor: AppColor.colorLoginScreen,
       body: Padding(
-        padding: EdgeInsets.all(AppDimen.V_DIMEN_30),
+        padding: EdgeInsets.only(
+          left: AppDimen.H_DIMEN_25,
+          top: AppDimen.V_DIMEN_30,
+          right: AppDimen.H_DIMEN_25,
+          bottom: AppDimen.V_DIMEN_25,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -99,15 +104,22 @@ class _LogInState extends State<LogIn> {
               isButtonwidget: true,
               textEditingController: button_controller,
               buttonText: "LOGIN",
+              onTap: ()
+              {
+                dispose();
+                Navigator.of(context).pushReplacementNamed(Router.ROUTE_MY_PROFILE);
+              },
             ),
             AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
             Center(
               child: Text(
                 "Dont have an account?",
-                style: TextStyle(color: AppColor.colorLoginText1,fontSize: AppDimen.TEXT_SIZE_18),
+                style: TextStyle(
+                    color: AppColor.colorLoginText1,
+                    fontSize: AppDimen.TEXT_SIZE_18),
               ),
             ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+            AppSpacing.verticalSpace(AppDimen.V_DIMEN_5),
             Center(
               child: GestureDetector(
                 child: Text(
@@ -116,8 +128,9 @@ class _LogInState extends State<LogIn> {
                       color: AppColor.colorLoginText2,
                       fontSize: AppDimen.TEXT_SIZE_18),
                 ),
-                onTap: (){
-                  Navigator.of(context).pushReplacementNamed(Router.ROUTE_REGISTRATION);
+                onTap: () {
+                  Navigator.of(context)
+                      .pushReplacementNamed(Router.ROUTE_REGISTRATION);
                 },
               ),
             ),

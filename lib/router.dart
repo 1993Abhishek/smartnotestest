@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartnotestest/ui/helper/route_animation.dart';
 import 'package:smartnotestest/ui/views/login_view.dart';
+import 'package:smartnotestest/ui/views/my_profile_view.dart';
 import 'package:smartnotestest/ui/views/signup.dart';
 import 'package:smartnotestest/ui/views/splash_screen.dart';
 //import 'package:selfcarerevolution/ui/helper/route_animation.dart';
@@ -72,9 +73,9 @@ class Router {
 //        );
 //        break;
 //
-//      case ROUTE_MY_PROFILE:
-//        currentWidget = MyProfilePage();
-//        break;
+      case ROUTE_MY_PROFILE:
+        currentWidget = MyProfile();
+        break;
 //
 //      case ABOUT:
 //        currentWidget = AboutPage();

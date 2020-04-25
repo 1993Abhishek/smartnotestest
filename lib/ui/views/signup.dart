@@ -41,7 +41,10 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       backgroundColor: AppColor.colorLoginScreen,
       body: Padding(
-        padding: EdgeInsets.all(AppDimen.V_DIMEN_30),
+        padding: EdgeInsets.only(left: AppDimen.H_DIMEN_25,
+          top: AppDimen.V_DIMEN_30,
+          right: AppDimen.H_DIMEN_25,
+          bottom: AppDimen.V_DIMEN_30,),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,7 +120,7 @@ class _SignupState extends State<Signup> {
                       fontSize: AppDimen.TEXT_SIZE_16,
                       color: AppColor.colorLoginScreenText),
                 ),
-                suffixWidget: Icon(Icons.remove_red_eye),
+                suffixWidget: Text("SHOW"),
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
               SmartTextField(

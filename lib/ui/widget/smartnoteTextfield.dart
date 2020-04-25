@@ -98,7 +98,7 @@ class _SmartTextFieldState extends State<SmartTextField> {
       onTap: widget.onTap,
           child: Container(
               height: AppDimen.V_DIMEN_70,
-              width: AppDimen.H_DIMEN_350,
+              width: double.infinity,
               child: Card(
                 color: AppColor.colorLoginScreenButton,
                 shape: RoundedRectangleBorder(
@@ -144,7 +144,7 @@ class _SmartTextFieldState extends State<SmartTextField> {
         )
         : Container(
             height: AppDimen.V_DIMEN_80,
-            width: AppDimen.H_DIMEN_350,
+            width: double.infinity,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(AppDimen.H_DIMEN_15),
@@ -219,7 +219,7 @@ class _SmartTextFieldState extends State<SmartTextField> {
                     widget.suffixWidget == null
                         ? Container()
                         : Padding(
-                            padding: EdgeInsets.only(right: AppDimen.H_DIMEN_8),
+                            padding: EdgeInsets.only(right: AppDimen.H_DIMEN_10),
                             child: widget.suffixWidget,
                           ),
                   ],

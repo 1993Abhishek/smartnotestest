@@ -14,6 +14,9 @@ class AppColor {
   static final Color colorLoginText2 = hexToColor("#5468fe");
   static final Color colorHeadText1 = hexToColor("#18212a");
   static final Color colorHeadText2 = hexToColor("#707070");
+  static final Color colorProfilePic = hexToColor("#f8616c");
+  static final Color colorProfileHd1 = hexToColor("#18212a");
+  static final Color colorProfiletext = hexToColor("#354352");
 
 
 
