@@ -118,7 +118,8 @@ class _MyProfileState extends State<MyProfile> {
               right: AppDimen.H_DIMEN_8,
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Icon(
                   Icons.view_headline,
@@ -148,7 +149,7 @@ class _MyProfileState extends State<MyProfile> {
           Center(
             child: Padding(
               padding: EdgeInsets.only(
-                left: AppDimen.H_DIMEN_25,
+                left: AppDimen.H_DIMEN_20,
                 top: AppDimen.V_DIMEN_10,
                 right: AppDimen.H_DIMEN_20,
                 bottom: AppDimen.V_DIMEN_10,
