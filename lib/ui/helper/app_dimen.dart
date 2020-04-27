@@ -51,6 +51,7 @@ class AppDimen {
   static final double V_DIMEN_160 = 20.61 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_150 = 19.32 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_100 = 12.88 * SizeConfig.safeBlockVertical;
+
   static final double V_DIMEN_80 = 10.31 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_70 = 9.02 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_65 = 8.37 * SizeConfig.safeBlockVertical;
