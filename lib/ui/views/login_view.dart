@@ -37,104 +37,107 @@ class _LogInState extends State<LogIn> {
           right: AppDimen.H_DIMEN_25,
           bottom: AppDimen.V_DIMEN_25,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Text(
-              "Welcome",
-              style: TextStyle(
-                color: AppColor.colorHeadText1,
-                fontSize: 30,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Text(
+                "Welcome",
+                style: TextStyle(
+                  color: AppColor.colorHeadText1,
+                  fontSize: 30,
+                ),
               ),
-            ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-            Text(
-              "Enter your email or phone number",
-              style: TextStyle(
-                color: AppColor.colorHeadText2,
-                fontSize: 20,
+              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+              Text(
+                "Enter your email or phone number",
+                style: TextStyle(
+                  color: AppColor.colorHeadText2,
+                  fontSize: 20,
+                ),
               ),
-            ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-            Image(
-              image: AssetImage("assets/LogIn_crop.jpg"),
-            ),
+              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+              Image(
+                image: AssetImage("assets/LogIn_crop.jpg"),
+              ),
 //            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-            SmartTextField(
-              isButton: false,
-              focusNode: phone_node,
-              textEditingController: phone_email_controller,
-              underlineColor: Colors.blue,
-              prefixWidget: Text(
-                "Email_id",
-                style: TextStyle(
-                    fontSize: AppDimen.TEXT_SIZE_16,
-                    color: AppColor.colorLoginScreenText),
-              ),
-            ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-            SmartTextField(
-              isButton: false,
-              focusNode: phone_node,
-              textEditingController: phone_email_controller,
-              underlineColor: Colors.blue,
-              prefixWidget: Text(
-                "Password",
-                style: TextStyle(
-                    fontSize: AppDimen.TEXT_SIZE_16,
-                    color: AppColor.colorLoginScreenText),
-              ),
-            ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-            Padding(
-              padding: EdgeInsets.only(left: AppDimen.H_DIMEN_170),
-              child: Text(
-                "Forgot Password ?",
-                style: TextStyle(
-                  fontSize: AppDimen.TEXT_SIZE_16,
-                  color: AppColor.colorLoginScreenButton,
-                ),
-              ),
-            ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-            SmartTextField(
-              isButton: true,
-              focusNode: button_node,
-              isButtonwidget: true,
-              textEditingController: button_controller,
-              buttonText: "LOGIN",
-              onTap: ()
-              {
-                dispose();
-                Navigator.of(context).pushReplacementNamed(Router.ROUTE_MY_PROFILE);
-              },
-            ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-            Center(
-              child: Text(
-                "Dont have an account?",
-                style: TextStyle(
-                    color: AppColor.colorLoginText1,
-                    fontSize: AppDimen.TEXT_SIZE_18),
-              ),
-            ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_5),
-            Center(
-              child: GestureDetector(
-                child: Text(
-                  "SIGNUP",
+              SmartTextField(
+                isButton: false,
+                focusNode: phone_node,
+                textEditingController: phone_email_controller,
+                underlineColor: Colors.blue,
+                prefixWidget: Text(
+                  "Email_id",
                   style: TextStyle(
-                      color: AppColor.colorLoginText2,
-                      fontSize: AppDimen.TEXT_SIZE_18),
+                      fontSize: AppDimen.TEXT_SIZE_16,
+                      color: AppColor.colorLoginScreenText),
                 ),
-                onTap: () {
-                  Navigator.of(context)
-                      .pushReplacementNamed(Router.ROUTE_REGISTRATION);
+              ),
+              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+              SmartTextField(
+                isButton: false,
+                focusNode: phone_node,
+                textEditingController: phone_email_controller,
+                underlineColor: Colors.blue,
+                prefixWidget: Text(
+                  "Password",
+                  style: TextStyle(
+                      fontSize: AppDimen.TEXT_SIZE_16,
+                      color: AppColor.colorLoginScreenText),
+                ),
+              ),
+              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+              Padding(
+                padding: EdgeInsets.only(left: AppDimen.H_DIMEN_170),
+                child: Text(
+                  "Forgot Password ?",
+                  style: TextStyle(
+                    fontSize: AppDimen.TEXT_SIZE_16,
+                    color: AppColor.colorLoginScreenButton,
+                  ),
+                ),
+              ),
+              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+              SmartTextField(
+                isButton: true,
+                focusNode: button_node,
+                isButtonwidget: true,
+                textEditingController: button_controller,
+                buttonText: "LOGIN",
+                onTap: ()
+                {
+                  dispose();
+//                Navigator.of(context).pushReplacementNamed(Router.ROUTE_MY_PROFILE);
+                  Navigator.of(context).pushReplacementNamed(Router.ROUTE_TEXT_EDITING);
                 },
               ),
-            ),
-          ],
+              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+              Center(
+                child: Text(
+                  "Dont have an account?",
+                  style: TextStyle(
+                      color: AppColor.colorLoginText1,
+                      fontSize: AppDimen.TEXT_SIZE_18),
+                ),
+              ),
+              AppSpacing.verticalSpace(AppDimen.V_DIMEN_5),
+              Center(
+                child: GestureDetector(
+                  child: Text(
+                    "SIGNUP",
+                    style: TextStyle(
+                        color: AppColor.colorLoginText2,
+                        fontSize: AppDimen.TEXT_SIZE_18),
+                  ),
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushReplacementNamed(Router.ROUTE_REGISTRATION);
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

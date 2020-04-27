@@ -39,6 +39,8 @@ dependencies:
   shared_preferences: ^0.5.6+3
   pull_to_refresh: ^1.5.8
   image_picker: ^0.6.5+2
+  zefyr: ^0.10.0
+  quill_delta: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +65,9 @@ flutter:
    - assets/signup.png
    - assets/profile.png
    - assets/LogIn_crop.jpg
+   - assets/tick2.png
+   - assets/tick.jpeg
+   - assets/cross.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
