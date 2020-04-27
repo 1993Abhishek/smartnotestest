@@ -6,6 +6,7 @@ class AppDimen {
   static final double H_DIMEN_350 = 79.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_300 = 70.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_270 = 69.10 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_260 = 65.10 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_250 = 59.10 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_200 = 47.28 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_180 = 42.55 * SizeConfig.safeBlockHorizontal;
@@ -15,7 +16,9 @@ class AppDimen {
   static final double H_DIMEN_130 = 28.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_140 = 28.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_120 = 28.57 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_115 = 27.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_100 = 23.64 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_95 = 22.94 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_90 = 21.28 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_80 = 18.91 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_75 = 17.73 * SizeConfig.safeBlockHorizontal;
@@ -43,6 +46,7 @@ class AppDimen {
   static final double V_DIMEN_350 = 45.10 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_320 = 40.66 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_300 = 38.66 * SizeConfig.safeBlockVertical;
+  static final double V_DIMEN_260 = 34 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_250 = 33 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_230 = 29.12 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_220 = 27.88 * SizeConfig.safeBlockVertical;

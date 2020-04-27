@@ -14,10 +14,10 @@ class MyProfile extends StatefulWidget {
 
 class _MyProfileState extends State<MyProfile> {
   String _image;
-  String imgPath= "assets/LogIn_crop.jpg";
+  String imgPath = "assets/LogIn_crop.jpg";
 
   Future getImage() async {
-    var image = await ImagePicker.pickImage(source: ImageSource.camera);
+    var image = await ImagePicker.pickImage(source: ImageSource.camera,);
     setState(() {
       _image = image.path;
     });
@@ -25,7 +25,7 @@ class _MyProfileState extends State<MyProfile> {
 
   _openGallery() async
   {
-    var image= await ImagePicker.pickImage(source: ImageSource.gallery,);
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery,);
     setState(() {
       _image = image.path;
     });
@@ -178,11 +178,12 @@ class _MyProfileState extends State<MyProfile> {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: Image.asset(
-                                _image==null ? imgPath : _image,
+
+                                _image == null ? imgPath : _image,
                                 alignment: Alignment.center,
                                 fit: BoxFit.cover,
-//                                height: AppDimen.V_DIMEN_100,
-//                                width: AppDimen.H_DIMEN_120,
+                                height: AppDimen.V_DIMEN_80,
+                                width: AppDimen.H_DIMEN_80,
                               ),
                             ),
                             radius: AppDimen.V_DIMEN_60,
@@ -300,7 +301,7 @@ class _MyProfileState extends State<MyProfile> {
                   AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
                   Center(
                     child: Container(
-                      height: AppDimen.V_DIMEN_320,
+                      height: AppDimen.V_DIMEN_250,
                       width: AppDimen.H_DIMEN_360,
                       child: Card(
                         elevation: 2,
@@ -315,7 +316,7 @@ class _MyProfileState extends State<MyProfile> {
                               top: AppDimen.V_DIMEN_10,
                               left: AppDimen.H_DIMEN_20,
                               right: AppDimen.H_DIMEN_10,
-                              bottom: AppDimen.V_DIMEN_2,
+                              bottom: AppDimen.V_DIMEN_10,
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -323,7 +324,7 @@ class _MyProfileState extends State<MyProfile> {
                                 Text(
                                   "About Us",
                                   style: TextStyle(
-                                    fontSize: AppDimen.TEXT_SIZE_24,
+                                    fontSize: AppDimen.TEXT_SIZE_20,
                                     color: AppColor.colorProfiletext,
                                   ),
                                 ),
@@ -331,7 +332,7 @@ class _MyProfileState extends State<MyProfile> {
                                 Text(
                                   "A student is a person who goes to school and is learning something. Students can be children, teenagers, or adults who are going to school, but it may also be other people who are learning, such as in college or university. ... A student can also be a person studying for a specific profession.",
                                   style: TextStyle(
-                                    fontSize: AppDimen.TEXT_SIZE_20,
+                                    fontSize: AppDimen.TEXT_SIZE_17,
                                     color: AppColor.colorProfiletext,
                                   ),
                                   textAlign: TextAlign.justify,

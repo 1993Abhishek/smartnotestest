@@ -44,7 +44,6 @@ class SmartTextField extends StatefulWidget {
       @required this.isButton,
       this.isButtonwidget,
       this.buttonText,
-
       this.hintText = "",
       this.valueText = "",
       this.textStyle,
@@ -95,8 +94,8 @@ class _SmartTextFieldState extends State<SmartTextField> {
     _setUpInitials();
     return widget.isButton
         ? GestureDetector(
-      onTap: widget.onTap,
-          child: Container(
+            onTap: widget.onTap,
+            child: Container(
               height: AppDimen.V_DIMEN_70,
               width: double.infinity,
               child: Card(
@@ -110,38 +109,39 @@ class _SmartTextFieldState extends State<SmartTextField> {
                     top: AppDimen.H_DIMEN_15,
                     bottom: AppDimen.H_DIMEN_10,
                   ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Stack(
+                    fit: StackFit.loose,
+                    overflow: Overflow.visible,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(
-                          left: AppDimen.H_DIMEN_90,
-                        ),
-                        child: Text(
-                          widget.buttonText,
-                          style: TextStyle(
-                            color: AppColor.colorLoginButtonText,
-                            fontSize: AppDimen.TEXT_SIZE_24,
+                        padding: EdgeInsets.only(left:AppDimen.H_DIMEN_100, top: AppDimen.V_DIMEN_5,),
+                          child: Text(
+                            widget.buttonText,
+                            style: TextStyle(
+                              color: AppColor.colorLoginButtonText,
+                              fontSize: AppDimen.TEXT_SIZE_24,
+                            ),
                           ),
                         ),
-                      ),
-                      AppSpacing.horizontalSpace(AppDimen.H_DIMEN_60),
                       widget.isButtonwidget
-                          ? CircleAvatar(
-                              radius: AppDimen.H_DIMEN_30,
-                              backgroundColor: AppColor.colorLoginButtonCircle,
-                              child: Icon(
-                                Icons.arrow_forward,
-                                color: AppColor.colorLoginButtonText,
+                          ? Padding(
+                            padding: EdgeInsets.only(left:AppDimen.H_DIMEN_260),
+                            child: CircleAvatar(
+                                radius: AppDimen.H_DIMEN_30,
+                                backgroundColor: AppColor.colorLoginButtonCircle,
+                                child: Icon(
+                                  Icons.arrow_forward,
+                                  color: AppColor.colorLoginButtonText,
+                                ),
                               ),
-                            )
+                          )
                           : Container()
                     ],
                   ),
                 ),
               ),
             ),
-        )
+          )
         : Container(
             height: AppDimen.V_DIMEN_80,
             width: double.infinity,
@@ -219,7 +219,8 @@ class _SmartTextFieldState extends State<SmartTextField> {
                     widget.suffixWidget == null
                         ? Container()
                         : Padding(
-                            padding: EdgeInsets.only(right: AppDimen.H_DIMEN_10),
+                            padding:
+                                EdgeInsets.only(right: AppDimen.H_DIMEN_10),
                             child: widget.suffixWidget,
                           ),
                   ],
