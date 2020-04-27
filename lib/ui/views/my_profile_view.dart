@@ -301,7 +301,7 @@ class _MyProfileState extends State<MyProfile> {
                   AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
                   Center(
                     child: Container(
-                      height: AppDimen.V_DIMEN_250,
+                      height: AppDimen.V_DIMEN_270,
                       width: AppDimen.H_DIMEN_360,
                       child: Card(
                         elevation: 2,
@@ -315,7 +315,7 @@ class _MyProfileState extends State<MyProfile> {
                             padding: EdgeInsets.only(
                               top: AppDimen.V_DIMEN_10,
                               left: AppDimen.H_DIMEN_20,
-                              right: AppDimen.H_DIMEN_10,
+                              right: AppDimen.H_DIMEN_20,
                               bottom: AppDimen.V_DIMEN_10,
                             ),
                             child: Column(
