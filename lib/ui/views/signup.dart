@@ -71,6 +71,7 @@ class _SignupState extends State<Signup> {
               ),
 //            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
               SmartTextField(
+                cursorColor: AppColor.colorLoginScreenText,
                 isButton: false,
                 focusNode: name_node,
                 textEditingController: name_controller,
@@ -84,6 +85,7 @@ class _SignupState extends State<Signup> {
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
               SmartTextField(
+                cursorColor: AppColor.colorLoginScreenText,
                 isButton: false,
                 focusNode: mail_node,
                 textEditingController: email_controller,
@@ -97,6 +99,7 @@ class _SignupState extends State<Signup> {
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
               SmartTextField(
+                cursorColor: AppColor.colorLoginScreenText,
                 isButton: false,
                 focusNode: phone_node,
                 textEditingController: phone_controller,
@@ -110,6 +113,7 @@ class _SignupState extends State<Signup> {
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
               SmartTextField(
+                cursorColor: AppColor.colorLoginScreenText,
                 isButton: false,
                 focusNode: password_node,
                 textEditingController: password_controller,

@@ -17,15 +17,18 @@ class _MyProfileState extends State<MyProfile> {
   String imgPath = "assets/LogIn_crop.jpg";
 
   Future getImage() async {
-    var image = await ImagePicker.pickImage(source: ImageSource.camera,);
+    var image = await ImagePicker.pickImage(
+      source: ImageSource.camera,
+    );
     setState(() {
       _image = image.path;
     });
   }
 
-  _openGallery() async
-  {
-    var image = await ImagePicker.pickImage(source: ImageSource.gallery,);
+  _openGallery() async {
+    var image = await ImagePicker.pickImage(
+      source: ImageSource.gallery,
+    );
     setState(() {
       _image = image.path;
     });
@@ -172,22 +175,20 @@ class _MyProfileState extends State<MyProfile> {
                             AppDimen.H_DIMEN_5,
                           ),
                           child: CircleAvatar(
-                            backgroundColor: AppColor.colorProfilePic,
-                            child: Container(
-                              decoration: BoxDecoration(
-//                                shape: BoxShape.circle,
-                                borderRadius: BorderRadius.circular(20),
-                              ),
+                            maxRadius: AppDimen.V_DIMEN_60,
+                            backgroundColor: Colors.white,
+                            child: CircleAvatar(
+                              maxRadius: AppDimen.V_DIMEN_50,
+                              foregroundColor: Colors.white,
+                              backgroundColor: AppColor.colorProfilePic,
                               child: Image.asset(
-
                                 _image == null ? imgPath : _image,
                                 alignment: Alignment.center,
                                 fit: BoxFit.cover,
-                                height: AppDimen.V_DIMEN_80,
-                                width: AppDimen.H_DIMEN_80,
+                                height: AppDimen.V_DIMEN_70,
+                                width: AppDimen.H_DIMEN_64,
                               ),
                             ),
-                            radius: AppDimen.V_DIMEN_60,
                           ),
                         ),
                       ),
@@ -195,18 +196,27 @@ class _MyProfileState extends State<MyProfile> {
                         padding: EdgeInsets.only(
                             top: AppDimen.V_DIMEN_80,
                             left: AppDimen.H_DIMEN_200),
-                        child: IconButton(
-                          color: Colors.white,
-                          tooltip: "Click to update picture",
-                          padding: EdgeInsets.all(10),
-                          icon: Icon(
-                            Icons.camera_alt,
-                            size: AppDimen.V_DIMEN_30,
-                            color: AppColor.colorProfiletext,
+                        child: CircleAvatar(
+                          maxRadius: AppDimen.V_DIMEN_25,
+                          backgroundColor: Colors.white,
+                          child: IconButton(
+                            alignment: Alignment.center,
+                            color: Colors.white,
+                            tooltip: "Click to update picture",
+                            padding: EdgeInsets.only(
+                              right: AppDimen.V_DIMEN_2,
+                              left: AppDimen.H_DIMEN_3,
+                              top: AppDimen.V_DIMEN_2,
+                            ),
+                            icon: Icon(
+                              Icons.camera_alt,
+                              size: AppDimen.V_DIMEN_35,
+                              color: AppColor.colorProfiletext,
+                            ),
+                            onPressed: () {
+                              _showChoiceDialogue(context);
+                            },
                           ),
-                          onPressed: () {
-                            _showChoiceDialogue(context);
-                          },
                         ),
                       )
                     ],

@@ -5,6 +5,7 @@ import 'package:smartnotestest/ui/views/login_view.dart';
 import 'package:smartnotestest/ui/views/my_profile_view.dart';
 import 'package:smartnotestest/ui/views/signup.dart';
 import 'package:smartnotestest/ui/views/splash_screen.dart';
+import 'package:smartnotestest/ui/views/stagging_views.dart';
 import 'package:smartnotestest/ui/views/text_editing_view.dart';
 //import 'package:selfcarerevolution/ui/helper/route_animation.dart';
 //import 'package:selfcarerevolution/ui/views/about_view.dart';
@@ -41,6 +42,7 @@ class Router {
   static const String ROUTE_SCR_WEB_VIEW = "scr_web_view";
   static const String ROUTE_WELCOME = "welcome_screen";
   static const String ROUTE_TEXT_EDITING = "text_editing";
+  static const String ROUTE_STAGGING = "stagging";
 
   static String ROUTE_CURRENT = "/";
 
@@ -64,6 +66,10 @@ class Router {
 
       case ROUTE_TEXT_EDITING:
         currentWidget = TextEditing();
+        break;
+
+      case ROUTE_STAGGING:
+        currentWidget = StaggingView();
         break;
 
 //      case ROUTE_NOTIFICATION_DETAILS:

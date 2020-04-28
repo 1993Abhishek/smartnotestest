@@ -63,6 +63,7 @@ class _LogInState extends State<LogIn> {
               ),
 //            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
               SmartTextField(
+                cursorColor: AppColor.colorLoginScreenText,
                 isButton: false,
                 focusNode: phone_node,
                 textEditingController: phone_email_controller,
@@ -76,6 +77,7 @@ class _LogInState extends State<LogIn> {
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
               SmartTextField(
+                cursorColor: AppColor.colorLoginScreenText,
                 isButton: false,
                 focusNode: phone_node,
                 textEditingController: phone_email_controller,
@@ -108,8 +110,9 @@ class _LogInState extends State<LogIn> {
                 onTap: ()
                 {
                   dispose();
-//                Navigator.of(context).pushReplacementNamed(Router.ROUTE_MY_PROFILE);
-                  Navigator.of(context).pushReplacementNamed(Router.ROUTE_TEXT_EDITING);
+//                Navigator.of(context).pushNamed(Router.ROUTE_MY_PROFILE);
+//                  Navigator.of(context).pushNamed(Router.ROUTE_TEXT_EDITING);
+                  Navigator.of(context).pushNamed(Router.ROUTE_STAGGING);
                 },
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),

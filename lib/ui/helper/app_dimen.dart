@@ -2,7 +2,7 @@ import 'size_config.dart';
 
 class AppDimen {
   /*HORIZONTAL SPACE*/
-  static final double H_DIMEN_360 = 85.92 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_360 = 86.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_350 = 79.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_300 = 70.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_270 = 69.10 * SizeConfig.safeBlockHorizontal;
@@ -41,6 +41,7 @@ class AppDimen {
 
   /*VERTICAL SPACE*/
   static final double V_DIMEN_550 = 80.98 * SizeConfig.safeBlockVertical;
+  static final double V_DIMEN_500 = 65.98 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_450 = 57.98 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_400 = 51.55 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_350 = 45.10 * SizeConfig.safeBlockVertical;
