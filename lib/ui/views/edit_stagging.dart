@@ -20,48 +20,45 @@ class _EditStaggingState extends State<EditStagging> {
   FocusNode _folderTopicNode;
   FocusNode _filesNameNode;
   FocusNode _buttonNode;
+
   @override
   void initState() {
+    _folderNameController = TextEditingController();
+    _folderTopicController = TextEditingController();
+    _filesNameController = TextEditingController();
+    _buttonController = TextEditingController();
 
-    _folderNameController= TextEditingController();
-    _folderTopicController= TextEditingController();
-    _filesNameController= TextEditingController();
-    _buttonController= TextEditingController();
-
-    _folderNameNode=FocusNode();
-    _folderTopicNode=FocusNode();
-    _filesNameNode=FocusNode();
-    _buttonNode= FocusNode();
+    _folderNameNode = FocusNode();
+    _folderTopicNode = FocusNode();
+    _filesNameNode = FocusNode();
+    _buttonNode = FocusNode();
 
     super.initState();
   }
 
-  _dispose()
-  {
+  _dispose() {
     _folderNameNode.dispose();
     _filesNameNode.dispose();
     _folderTopicNode.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.colorLoginScreen,
-      body: Padding(
-        padding: EdgeInsets.only(
-          top: AppDimen.V_DIMEN_20,
-          left: AppDimen.H_DIMEN_10,
-          right: AppDimen.H_DIMEN_15,
-          bottom: AppDimen.V_DIMEN_20,
-        ),
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+      body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(
+                top: AppDimen.V_DIMEN_25,
+              ),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
                   FlatButton(
+                    onPressed: (){},
                     color: AppColor.colorLoginScreen,
                     child: Container(
                       color: AppColor.colorLoginScreen,
@@ -79,6 +76,7 @@ class _EditStaggingState extends State<EditStagging> {
                     style: TextStyle(fontSize: AppDimen.TEXT_SIZE_30),
                   ),
                   FlatButton(
+                    onPressed: (){},
                     color: AppColor.colorLoginScreen,
                     child: Container(
                       height: AppDimen.V_DIMEN_25,
@@ -92,62 +90,74 @@ class _EditStaggingState extends State<EditStagging> {
                   ),
                 ],
               ),
-              SmartTextField(
-                cursorColor: AppColor.colorLoginScreenText,
-                isButton: false,
-                focusNode: _folderNameNode,
-                textEditingController: _folderNameController,
-                underlineColor: Colors.blue,
-                prefixWidget: Text(
-                  "Folder Name:( e.g Science )",
-                  style: TextStyle(
-                      fontSize: AppDimen.TEXT_SIZE_16,
-                      color: AppColor.colorLoginScreenText),
-                ),
+            ),
+            AppSpacing.verticalSpace(AppDimen.V_DIMEN_20),
+            Padding(
+              padding: EdgeInsets.only(
+                left: AppDimen.H_DIMEN_25,
+                right: AppDimen.H_DIMEN_25,
+                bottom: AppDimen.V_DIMEN_25,
               ),
-              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              SmartTextField(
-                cursorColor: AppColor.colorLoginScreenText,
-                isButton: false,
-                focusNode: _folderTopicNode,
-                textEditingController: _folderTopicController,
-                underlineColor: Colors.blue,
-                prefixWidget: Text(
-                  "Topic of the folder(e.g Biology)",
-                  style: TextStyle(
-                      fontSize: AppDimen.TEXT_SIZE_16,
-                      color: AppColor.colorLoginScreenText),
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  SmartTextField(
+                    cursorColor: AppColor.colorLoginScreenText,
+                    isButton: false,
+                    focusNode: _folderNameNode,
+                    textEditingController: _folderNameController,
+                    underlineColor: Colors.blue,
+                    prefixWidget: Text(
+                      "Folder Name:( e.g Science )",
+                      style: TextStyle(
+                          fontSize: AppDimen.TEXT_SIZE_16,
+                          color: AppColor.colorLoginScreenText),
+                    ),
+                  ),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  SmartTextField(
+                    cursorColor: AppColor.colorLoginScreenText,
+                    isButton: false,
+                    focusNode: _folderTopicNode,
+                    textEditingController: _folderTopicController,
+                    underlineColor: Colors.blue,
+                    prefixWidget: Text(
+                      "Topic of the folder(e.g Biology)",
+                      style: TextStyle(
+                          fontSize: AppDimen.TEXT_SIZE_16,
+                          color: AppColor.colorLoginScreenText),
+                    ),
+                  ),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  SmartTextField(
+                    cursorColor: AppColor.colorLoginScreenText,
+                    isButton: false,
+                    focusNode: _filesNameNode,
+                    textEditingController: _filesNameController,
+                    underlineColor: Colors.blue,
+                    prefixWidget: Text(
+                      "Files Name",
+                      style: TextStyle(
+                          fontSize: AppDimen.TEXT_SIZE_16,
+                          color: AppColor.colorLoginScreenText),
+                    ),
+                  ),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_20),
+                  SmartTextField(
+                    isButton: true,
+                    focusNode: _buttonNode,
+                    isButtonwidget: true,
+                    textEditingController: _buttonController,
+                    buttonText: "SAVE",
+                    onTap: () {
+                      dispose();
+                    },
+                  ),
+                ],
               ),
-              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              SmartTextField(
-                cursorColor: AppColor.colorLoginScreenText,
-                isButton: false,
-                focusNode: _filesNameNode,
-                textEditingController: _filesNameController,
-                underlineColor: Colors.blue,
-                prefixWidget: Text(
-                  "Files Name",
-                  style: TextStyle(
-                      fontSize: AppDimen.TEXT_SIZE_16,
-                      color: AppColor.colorLoginScreenText),
-                ),
-              ),
-              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              SmartTextField(
-                isButton: true,
-                focusNode: _buttonNode,
-                isButtonwidget: true,
-                textEditingController: _buttonController,
-                buttonText: "SAVE",
-                onTap: ()
-                {
-                  dispose();
-
-                },
-              ),
-            ]),
-      ),
+            )
+          ]),
     );
   }
 }

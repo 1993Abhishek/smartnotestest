@@ -60,6 +60,7 @@ class _TextEditingState extends State<TextEditing> {
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
                     FlatButton(
+                      onPressed: (){},
                       color: AppColor.colorLoginScreen,
                       child: Container(
                         color: AppColor.colorLoginScreen,
@@ -77,6 +78,7 @@ class _TextEditingState extends State<TextEditing> {
                       style: TextStyle(fontSize: AppDimen.TEXT_SIZE_30),
                     ),
                     FlatButton(
+                      onPressed: (){},
                       color: AppColor.colorLoginScreen,
                       child: Container(
                         height: AppDimen.V_DIMEN_25,
