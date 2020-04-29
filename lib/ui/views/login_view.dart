@@ -12,6 +12,153 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
+
+  bool routeProfile= false;
+  bool routeStaging= false;
+  bool routeEditing= false;
+  bool routeEditStaging= false;
+
+  Future<void> _showChoiceDialogue(BuildContext context) async {
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Center(
+              child: Text(
+                "Select",
+                style: TextStyle(
+                  fontSize: AppDimen.TEXT_SIZE_20,
+                  color: AppColor.colorProfilePic,
+                ),
+              ),
+            ),
+            elevation: 10,
+            backgroundColor: AppColor.colorLoginScreen,
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  GestureDetector(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+//                      color: Colors.blueAccent,
+                      width: AppDimen.H_DIMEN_50,
+                      height: AppDimen.V_DIMEN_30,
+                      child: Center(
+                        child: Text(
+                          "My Profile",
+                          style: TextStyle(
+                            fontSize: AppDimen.TEXT_SIZE_15,
+                            color: AppColor.colorProfiletext,
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      if(!routeStaging && !routeEditing && !routeProfile)
+                        {
+                          dispose();
+                          routeProfile = true;
+                        }
+                      Navigator.of(context).pushNamed(Router.ROUTE_MY_PROFILE);
+                    },
+                  ),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  GestureDetector(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+//                      color: Colors.blueAccent,
+                      width: AppDimen.H_DIMEN_50,
+                      height: AppDimen.V_DIMEN_30,
+                      child: Center(
+                        child: Text(
+                          "Stagging",
+                          style: TextStyle(
+                            fontSize: AppDimen.TEXT_SIZE_15,
+                            color: AppColor.colorProfiletext,
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      if(!routeStaging && !routeEditing && !routeProfile)
+                      {
+                        dispose();
+                        routeStaging = true;
+                      }
+                      Navigator.of(context).pushNamed(Router.ROUTE_STAGGING);
+                    },
+                  ),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  GestureDetector(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+//                      color: Colors.blueAccent,
+                      width: AppDimen.H_DIMEN_50,
+                      height: AppDimen.V_DIMEN_30,
+                      child: Center(
+                        child: Text(
+                          "Text Editing",
+                          style: TextStyle(
+                            fontSize: AppDimen.TEXT_SIZE_15,
+                            color: AppColor.colorProfiletext,
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      if(!routeStaging && !routeEditing && !routeProfile)
+                      {
+                        dispose();
+                        routeEditing = true;
+                      }
+                      Navigator.of(context).pushNamed(Router.ROUTE_TEXT_EDITING);
+                    },
+                  ),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  GestureDetector(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+//                      color: Colors.blueAccent,
+                      width: AppDimen.H_DIMEN_50,
+                      height: AppDimen.V_DIMEN_30,
+                      child: Center(
+                        child: Text(
+                          "Stag Editing",
+                          style: TextStyle(
+                            fontSize: AppDimen.TEXT_SIZE_15,
+                            color: AppColor.colorProfiletext,
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      if(!routeStaging && !routeEditing && !routeProfile && !routeEditStaging)
+                      {
+                        dispose();
+                        routeEditStaging = true;
+                      }
+                      Navigator.of(context).pushNamed(Router.ROUTE_EDIT_STAGGING);
+                    },
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
   TextEditingController phone_email_controller = TextEditingController();
   TextEditingController password_controller = TextEditingController();
   TextEditingController button_controller = TextEditingController();
@@ -109,10 +256,11 @@ class _LogInState extends State<LogIn> {
                 buttonText: "LOGIN",
                 onTap: ()
                 {
-                  dispose();
+//                  dispose();
+                  _showChoiceDialogue(context);
 //                Navigator.of(context).pushNamed(Router.ROUTE_MY_PROFILE);
 //                  Navigator.of(context).pushNamed(Router.ROUTE_TEXT_EDITING);
-                  Navigator.of(context).pushNamed(Router.ROUTE_STAGGING);
+//                  Navigator.of(context).pushNamed(Router.ROUTE_STAGGING);
                 },
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),

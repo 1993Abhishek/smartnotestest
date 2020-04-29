@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartnotestest/ui/helper/route_animation.dart';
+import 'package:smartnotestest/ui/views/edit_stagging.dart';
 import 'package:smartnotestest/ui/views/login_view.dart';
 import 'package:smartnotestest/ui/views/my_profile_view.dart';
 import 'package:smartnotestest/ui/views/signup.dart';
@@ -43,6 +44,7 @@ class Router {
   static const String ROUTE_WELCOME = "welcome_screen";
   static const String ROUTE_TEXT_EDITING = "text_editing";
   static const String ROUTE_STAGGING = "stagging";
+  static const String ROUTE_EDIT_STAGGING = "edit_stagging";
 
   static String ROUTE_CURRENT = "/";
 
@@ -70,6 +72,10 @@ class Router {
 
       case ROUTE_STAGGING:
         currentWidget = StaggingView();
+        break;
+
+      case ROUTE_EDIT_STAGGING:
+        currentWidget = EditStagging();
         break;
 
 //      case ROUTE_NOTIFICATION_DETAILS:

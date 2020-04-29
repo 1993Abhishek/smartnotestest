@@ -65,22 +65,26 @@ class _TextEditingState extends State<TextEditing> {
                         color: AppColor.colorLoginScreen,
                         height: AppDimen.V_DIMEN_25,
                         width: AppDimen.H_DIMEN_50,
-                        child: Image.asset(
-                          "assets/cross.png",
+                        child: Icon(
+                          Icons.clear,
+                          color: Colors.black,
+                          size: AppDimen.V_DIMEN_30,
                         ),
                       ),
                     ),
                     Text(
                       "Text Editor",
-                      style: TextStyle(fontSize: AppDimen.TEXT_SIZE_35),
+                      style: TextStyle(fontSize: AppDimen.TEXT_SIZE_30),
                     ),
                     FlatButton(
                       color: AppColor.colorLoginScreen,
                       child: Container(
                         height: AppDimen.V_DIMEN_25,
-                        width: AppDimen.H_DIMEN_50,
-                        child: Image.asset(
-                          "assets/tick2.png",
+                        width: AppDimen.H_DIMEN_40,
+                        child: Icon(
+                          Icons.check,
+                          color: Colors.black,
+                          size: AppDimen.H_DIMEN_30,
                         ),
                       ),
                     ),
@@ -107,6 +111,59 @@ class _TextEditingState extends State<TextEditing> {
                 ),
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+              Container(
+                height: AppDimen.V_DIMEN_65,
+                width: AppDimen.H_DIMEN_300,
+                child: Card(
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(AppDimen.H_DIMEN_25)),
+                  elevation: 2,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      left: AppDimen.H_DIMEN_20,
+                      right: AppDimen.H_DIMEN_20,
+                      top: AppDimen.V_DIMEN_2,
+                      bottom: AppDimen.V_DIMEN_8,
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisSize: MainAxisSize.max,
+                      children: <Widget>[
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Icon(Icons.undo),
+                            Text("UNDO"),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Icon(Icons.edit_attributes),
+                            Text("Erase"),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Icon(Icons.format_underlined),
+                            Text("UNDERLINE"),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Icon(Icons.fiber_manual_record),
+                            Text("HIGHLIGHT"),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               Padding(
                 padding: EdgeInsets.only(
                   left: AppDimen.H_DIMEN_25,

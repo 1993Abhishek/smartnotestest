@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:smartnotestest/ui/helper/app_colors.dart';
 import 'package:smartnotestest/ui/helper/app_dimen.dart';
 import 'package:smartnotestest/ui/helper/app_spacing.dart';
@@ -11,6 +14,19 @@ class StaggingView extends StatefulWidget {
 }
 
 class _StaggingViewState extends State<StaggingView> {
+
+  File _image;
+
+
+  Future getImage() async {
+    var image = await ImagePicker.pickImage(
+      source: ImageSource.camera,
+    );
+    setState(() {
+      _image = image;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,10 +59,13 @@ class _StaggingViewState extends State<StaggingView> {
                     color: AppColor.colorProfileHd1,
                   ),
                 ),
-                Icon(
-                  Icons.camera_alt,
-                  color: AppColor.colorProfileHd1,
-                  size: AppDimen.TEXT_SIZE_35,
+                GestureDetector(
+                  onTap: getImage,
+                  child: Icon(
+                    Icons.camera_alt,
+                    color: AppColor.colorProfileHd1,
+                    size: AppDimen.TEXT_SIZE_35,
+                  ),
                 ),
               ],
             ),
