@@ -171,7 +171,7 @@ class _TextEditingState extends State<TextEditing> {
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Icon(
-                                    Icons.edit_attributes,
+                                    Icons.border_color,
                                     size: AppDimen.TEXT_SIZE_26,
                                   ),
                                   Text(

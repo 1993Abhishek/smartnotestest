@@ -18,7 +18,17 @@ class AppColor {
   static final Color colorProfileHd1 = hexToColor("#18212a");
   static final Color colorProfiletext = hexToColor("#354352");
 
+  static final Color colorNotesLibraryItem1_A = hexToColor("#e3434f");
+  static final Color colorNotesLibraryItem1_B = hexToColor("#f8616c");
+  static final Color colorNotesLibraryItem2_A = hexToColor("#06bbb2");
+  static final Color colorNotesLibraryItem2_B = hexToColor("#00d9ce");
+  static final Color colorNotesLibraryItem3_A = hexToColor("#f2a94c");
+  static final Color colorNotesLibraryItem3_B = hexToColor("#ffba61");
 
+  static final Color colorNotesLibrary_1 = hexToColor("#f8616c");
+  static final Color colorNotesLibrary_2 = hexToColor("#2d23ba");
+  static final Color colorNotesLibrary_3 = hexToColor("#ffba61");
+  static final Color colorNotesLibrary_4 = hexToColor("#00d9ce");
 
   static final Color colorPrimary = hexToColor("#893caa");
   static final Color colorSecondary = hexToColor("#1870c9");

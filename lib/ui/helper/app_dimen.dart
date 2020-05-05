@@ -2,6 +2,7 @@ import 'size_config.dart';
 
 class AppDimen {
   /*HORIZONTAL SPACE*/
+  static final double H_DIMEN_400 = 97.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_360 = 86.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_350 = 79.92 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_300 = 70.92 * SizeConfig.safeBlockHorizontal;
@@ -17,8 +18,10 @@ class AppDimen {
   static final double H_DIMEN_150 = 35.46 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_140 = 32.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_130 = 30.57 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_125 = 29.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_120 = 28.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_115 = 27.57 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_110 = 25.87 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_100 = 23.64 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_95 = 22.94 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_90 = 21.28 * SizeConfig.safeBlockHorizontal;
@@ -42,10 +45,14 @@ class AppDimen {
   static final double H_DIMEN_3 = 0.70 * SizeConfig.safeBlockHorizontal;
 
   /*VERTICAL SPACE*/
+
+  static final double V_DIMEN_600 = 90.98 * SizeConfig.safeBlockVertical;
+  static final double V_DIMEN_580 = 88.98 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_550 = 80.98 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_500 = 65.98 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_450 = 57.98 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_400 = 51.55 * SizeConfig.safeBlockVertical;
+  static final double V_DIMEN_360 = 49.55 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_350 = 45.10 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_320 = 40.66 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_300 = 38.66 * SizeConfig.safeBlockVertical;
@@ -59,7 +66,7 @@ class AppDimen {
   static final double V_DIMEN_160 = 20.61 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_150 = 19.32 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_100 = 12.88 * SizeConfig.safeBlockVertical;
-
+  static final double V_DIMEN_90 = 11.88 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_80 = 10.31 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_70 = 9.02 * SizeConfig.safeBlockVertical;
   static final double V_DIMEN_65 = 8.37 * SizeConfig.safeBlockVertical;

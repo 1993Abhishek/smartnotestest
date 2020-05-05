@@ -17,6 +17,7 @@ class _LogInState extends State<LogIn> {
   bool routeEditing = false;
   bool routeEditStaging = false;
   bool routeNotesLibrary = false;
+  bool routeReceivedNotes = false;
 
   Future<void> _showChoiceDialogue(BuildContext context) async {
     return showDialog(
@@ -61,7 +62,8 @@ class _LogInState extends State<LogIn> {
                           !routeEditing &&
                           !routeProfile &&
                           !routeEditStaging &&
-                          !routeNotesLibrary) {
+                          !routeNotesLibrary &&
+                          !routeReceivedNotes) {
                         dispose();
                         routeProfile = true;
                       }
@@ -93,7 +95,8 @@ class _LogInState extends State<LogIn> {
                           !routeEditing &&
                           !routeProfile &&
                           !routeEditStaging &&
-                          !routeNotesLibrary) {
+                          !routeNotesLibrary &&
+                          !routeReceivedNotes) {
                         dispose();
                         routeStaging = true;
                       }
@@ -125,7 +128,8 @@ class _LogInState extends State<LogIn> {
                           !routeEditing &&
                           !routeProfile &&
                           !routeEditStaging &&
-                          !routeNotesLibrary) {
+                          !routeNotesLibrary &&
+                          !routeReceivedNotes) {
                         dispose();
                         routeEditing = true;
                       }
@@ -158,7 +162,8 @@ class _LogInState extends State<LogIn> {
                           !routeEditing &&
                           !routeProfile &&
                           !routeEditStaging &&
-                          !routeNotesLibrary) {
+                          !routeNotesLibrary &&
+                          !routeReceivedNotes) {
                         dispose();
                         routeEditStaging = true;
                       }
@@ -191,12 +196,48 @@ class _LogInState extends State<LogIn> {
                           !routeEditing &&
                           !routeProfile &&
                           !routeEditStaging &&
-                          !routeNotesLibrary) {
+                          !routeNotesLibrary &&
+                          !routeReceivedNotes) {
                         dispose();
                         routeNotesLibrary = true;
                       }
                       Navigator.of(context)
                           .pushNamed(Router.ROUTE_NOTES_LIBRARY);
+                    },
+                  ),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  GestureDetector(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+//                      color: Colors.blueAccent,
+                      width: AppDimen.H_DIMEN_50,
+                      height: AppDimen.V_DIMEN_30,
+                      child: Center(
+                        child: Text(
+                          "Received Notes",
+                          style: TextStyle(
+                            fontSize: AppDimen.TEXT_SIZE_15,
+                            color: AppColor.colorProfiletext,
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      if (!routeStaging &&
+                          !routeEditing &&
+                          !routeProfile &&
+                          !routeEditStaging &&
+                          !routeNotesLibrary &&
+                          !routeReceivedNotes) {
+                        dispose();
+                        routeReceivedNotes = true;
+                      }
+                      Navigator.of(context).pushNamed(
+                        Router.ROUTE_RECEIVED_NOTES,
+                      );
                     },
                   ),
                 ],

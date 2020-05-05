@@ -107,7 +107,7 @@ class _SmartTextFieldState extends State<SmartTextField> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(left: AppDimen.H_DIMEN_140),
+                      padding: widget.isButtonwidget ? EdgeInsets.only(left: AppDimen.H_DIMEN_140) : EdgeInsets.only(left: AppDimen.H_DIMEN_150),
                       child: Text(
                         widget.buttonText,
                         style: TextStyle(

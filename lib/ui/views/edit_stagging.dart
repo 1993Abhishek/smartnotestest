@@ -51,32 +51,32 @@ class _EditStaggingState extends State<EditStagging> {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(
-                top: AppDimen.V_DIMEN_25,
+                top: AppDimen.V_DIMEN_40,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
                   FlatButton(
-                    onPressed: (){},
+                    onPressed: () {},
                     color: AppColor.colorLoginScreen,
                     child: Container(
                       color: AppColor.colorLoginScreen,
                       height: AppDimen.V_DIMEN_25,
                       width: AppDimen.H_DIMEN_50,
                       child: Icon(
-                        Icons.line_weight,
+                        Icons.dehaze,
                         color: Colors.black,
                         size: AppDimen.V_DIMEN_30,
                       ),
                     ),
                   ),
                   Text(
-                    "Edit Stagging",
+                    "Edit Staging",
                     style: TextStyle(fontSize: AppDimen.TEXT_SIZE_30),
                   ),
                   FlatButton(
-                    onPressed: (){},
+                    onPressed: () {},
                     color: AppColor.colorLoginScreen,
                     child: Container(
                       height: AppDimen.V_DIMEN_25,
@@ -91,11 +91,11 @@ class _EditStaggingState extends State<EditStagging> {
                 ],
               ),
             ),
-            AppSpacing.verticalSpace(AppDimen.V_DIMEN_20),
+            AppSpacing.verticalSpace(AppDimen.V_DIMEN_30),
             Padding(
               padding: EdgeInsets.only(
-                left: AppDimen.H_DIMEN_25,
-                right: AppDimen.H_DIMEN_25,
+                left: AppDimen.H_DIMEN_30,
+                right: AppDimen.H_DIMEN_30,
                 bottom: AppDimen.V_DIMEN_25,
               ),
               child: Column(
@@ -115,7 +115,9 @@ class _EditStaggingState extends State<EditStagging> {
                           color: AppColor.colorLoginScreenText),
                     ),
                   ),
-                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  AppSpacing.verticalSpace(
+                    AppDimen.V_DIMEN_15,
+                  ),
                   SmartTextField(
                     cursorColor: AppColor.colorLoginScreenText,
                     isButton: false,
@@ -129,7 +131,9 @@ class _EditStaggingState extends State<EditStagging> {
                           color: AppColor.colorLoginScreenText),
                     ),
                   ),
-                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  AppSpacing.verticalSpace(
+                    AppDimen.V_DIMEN_15,
+                  ),
                   SmartTextField(
                     cursorColor: AppColor.colorLoginScreenText,
                     isButton: false,
@@ -143,11 +147,11 @@ class _EditStaggingState extends State<EditStagging> {
                           color: AppColor.colorLoginScreenText),
                     ),
                   ),
-                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_20),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_30),
                   SmartTextField(
                     isButton: true,
                     focusNode: _buttonNode,
-                    isButtonwidget: true,
+                    isButtonwidget: false,
                     textEditingController: _buttonController,
                     buttonText: "SAVE",
                     onTap: () {
