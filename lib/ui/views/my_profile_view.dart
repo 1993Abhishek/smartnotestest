@@ -117,7 +117,7 @@ class _MyProfileState extends State<MyProfile> {
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(
-                top: AppDimen.V_DIMEN_18,
+                top: AppDimen.V_DIMEN_40,
                 left: AppDimen.H_DIMEN_8,
                 right: AppDimen.H_DIMEN_8,
               ),
@@ -127,20 +127,20 @@ class _MyProfileState extends State<MyProfile> {
                 children: <Widget>[
                   Icon(
                     Icons.view_headline,
-                    size: AppDimen.TEXT_SIZE_40,
+                    size: AppDimen.TEXT_SIZE_35,
                   ),
                   AppSpacing.horizontalSpace(AppDimen.H_DIMEN_75),
                   Text(
                     "Profile",
                     style: TextStyle(
-                        fontSize: AppDimen.TEXT_SIZE_40,
+                        fontSize: AppDimen.TEXT_SIZE_35,
                         color: AppColor.colorProfileHd1),
                   ),
                   AppSpacing.horizontalSpace(AppDimen.H_DIMEN_75),
                   IconButton(
                     icon: Icon(
                       Icons.camera_alt,
-                      size: AppDimen.TEXT_SIZE_40,
+                      size: AppDimen.TEXT_SIZE_35,
                       color: AppColor.colorProfiletext,
                     ),
                     onPressed: () {
@@ -227,7 +227,7 @@ class _MyProfileState extends State<MyProfile> {
                       child: Text(
                         "Alessandro Griffith",
                         style: TextStyle(
-                          fontSize: AppDimen.TEXT_SIZE_35,
+                          fontSize: AppDimen.TEXT_SIZE_26,
                           color: AppColor.colorProfiletext,
                         ),
                       ),
@@ -235,8 +235,8 @@ class _MyProfileState extends State<MyProfile> {
                     AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
                     Center(
                       child: Container(
-                        height: AppDimen.V_DIMEN_70,
-                        width: AppDimen.H_DIMEN_250,
+                        height: AppDimen.V_DIMEN_65,
+                        width: AppDimen.H_DIMEN_240,
                         child: Card(
                           elevation: 2,
                           shape: RoundedRectangleBorder(
@@ -247,7 +247,7 @@ class _MyProfileState extends State<MyProfile> {
                           color: Colors.white,
                           child: Padding(
                             padding: EdgeInsets.only(
-                              left: AppDimen.H_DIMEN_20,
+                              left: AppDimen.H_DIMEN_10,
                               right: AppDimen.H_DIMEN_5,
                             ),
                             child: Row(
@@ -261,7 +261,7 @@ class _MyProfileState extends State<MyProfile> {
                                 Text(
                                   "+1(666) 777-8888",
                                   style: TextStyle(
-                                    fontSize: AppDimen.TEXT_SIZE_22,
+                                    fontSize: AppDimen.TEXT_SIZE_20,
                                     color: AppColor.colorProfiletext,
                                   ),
                                 )
@@ -274,8 +274,8 @@ class _MyProfileState extends State<MyProfile> {
                     AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
                     Center(
                       child: Container(
-                        height: AppDimen.V_DIMEN_70,
-                        width: AppDimen.H_DIMEN_250,
+                        height: AppDimen.V_DIMEN_65,
+                        width: AppDimen.H_DIMEN_240,
                         child: Card(
                           elevation: 2,
                           shape: RoundedRectangleBorder(
@@ -300,7 +300,7 @@ class _MyProfileState extends State<MyProfile> {
                                 Text(
                                   "alessa@gmail.com",
                                   style: TextStyle(
-                                    fontSize: AppDimen.TEXT_SIZE_22,
+                                    fontSize: AppDimen.TEXT_SIZE_20,
                                     color: AppColor.colorProfiletext,
                                   ),
                                 )
@@ -313,7 +313,7 @@ class _MyProfileState extends State<MyProfile> {
                     AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
                     Center(
                       child: Container(
-                        height: AppDimen.V_DIMEN_270,
+                        height: AppDimen.V_DIMEN_230,
                         width: AppDimen.H_DIMEN_360,
                         child: Card(
                           elevation: 2,
@@ -324,33 +324,34 @@ class _MyProfileState extends State<MyProfile> {
                           ),
                           color: Colors.white,
                           child: Padding(
-                              padding: EdgeInsets.only(
-                                top: AppDimen.V_DIMEN_10,
-                                left: AppDimen.H_DIMEN_20,
-                                right: AppDimen.H_DIMEN_20,
-                                bottom: AppDimen.V_DIMEN_10,
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    "About Us",
-                                    style: TextStyle(
-                                      fontSize: AppDimen.TEXT_SIZE_20,
-                                      color: AppColor.colorProfiletext,
-                                    ),
+                            padding: EdgeInsets.only(
+                              top: AppDimen.V_DIMEN_10,
+                              left: AppDimen.H_DIMEN_20,
+                              right: AppDimen.H_DIMEN_20,
+                              bottom: AppDimen.V_DIMEN_10,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "About Us",
+                                  style: TextStyle(
+                                    fontSize: AppDimen.TEXT_SIZE_18,
+                                    color: AppColor.colorProfiletext,
                                   ),
-                                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-                                  Text(
-                                    "A student is a person who goes to school and is learning something. Students can be children, teenagers, or adults who are going to school, but it may also be other people who are learning, such as in college or university. ... A student can also be a person studying for a specific profession.",
-                                    style: TextStyle(
-                                      fontSize: AppDimen.TEXT_SIZE_17,
-                                      color: AppColor.colorProfiletext,
-                                    ),
-                                    textAlign: TextAlign.justify,
-                                  )
-                                ],
-                              )),
+                                ),
+                                AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                                Text(
+                                  "A student is a person who goes to school and is learning something. Students can be children, teenagers, or adults who are going to school, but it may also be other people who are learning, such as in college or university. ... A student can also be a person studying for a specific profession.",
+                                  style: TextStyle(
+                                    fontSize: AppDimen.TEXT_SIZE_16,
+                                    color: AppColor.colorProfiletext,
+                                  ),
+                                  textAlign: TextAlign.justify,
+                                )
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     )

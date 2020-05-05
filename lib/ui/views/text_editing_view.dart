@@ -60,7 +60,9 @@ class _TextEditingState extends State<TextEditing> {
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
                     FlatButton(
-                      onPressed: (){},
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
                       color: AppColor.colorLoginScreen,
                       child: Container(
                         color: AppColor.colorLoginScreen,
@@ -69,16 +71,16 @@ class _TextEditingState extends State<TextEditing> {
                         child: Icon(
                           Icons.clear,
                           color: Colors.black,
-                          size: AppDimen.V_DIMEN_30,
+                          size: AppDimen.V_DIMEN_35,
                         ),
                       ),
                     ),
                     Text(
                       "Text Editor",
-                      style: TextStyle(fontSize: AppDimen.TEXT_SIZE_30),
+                      style: TextStyle(fontSize: AppDimen.TEXT_SIZE_35),
                     ),
                     FlatButton(
-                      onPressed: (){},
+                      onPressed: () {},
                       color: AppColor.colorLoginScreen,
                       child: Container(
                         height: AppDimen.V_DIMEN_25,
@@ -86,7 +88,7 @@ class _TextEditingState extends State<TextEditing> {
                         child: Icon(
                           Icons.check,
                           color: Colors.black,
-                          size: AppDimen.H_DIMEN_30,
+                          size: AppDimen.H_DIMEN_35,
                         ),
                       ),
                     ),
@@ -113,76 +115,157 @@ class _TextEditingState extends State<TextEditing> {
                 ),
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              Container(
-                height: AppDimen.V_DIMEN_65,
-                width: AppDimen.H_DIMEN_300,
-                child: Card(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(AppDimen.H_DIMEN_25)),
-                  elevation: 2,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                      left: AppDimen.H_DIMEN_20,
-                      right: AppDimen.H_DIMEN_20,
-                      top: AppDimen.V_DIMEN_2,
-                      bottom: AppDimen.V_DIMEN_8,
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      mainAxisSize: MainAxisSize.max,
-                      children: <Widget>[
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Icon(Icons.undo),
-                            Text("UNDO"),
-                          ],
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Icon(Icons.edit_attributes),
-                            Text("Erase"),
-                          ],
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Icon(Icons.format_underlined),
-                            Text("UNDERLINE"),
-                          ],
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Icon(Icons.fiber_manual_record),
-                            Text("HIGHLIGHT"),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
               Padding(
                 padding: EdgeInsets.only(
-                  left: AppDimen.H_DIMEN_25,
-                  top: AppDimen.V_DIMEN_30,
-                  right: AppDimen.H_DIMEN_25,
+                  left: AppDimen.H_DIMEN_40,
+//                  top: AppDimen.V_DIMEN_10,
+                  right: AppDimen.H_DIMEN_35,
                   bottom: AppDimen.V_DIMEN_25,
                 ),
-                child: SmartTextField(
-                  isButton: true,
-                  focusNode: button_node,
-                  isButtonwidget: true,
-                  textEditingController: button_controller,
-                  buttonText: "Transfer file",
-                  onTap: () {
-                    _disposeAll();
-//                Navigator.of(context).pushReplacementNamed(Router.ROUTE_MY_PROFILE);
-                  },
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: AppDimen.V_DIMEN_70,
+                      width: AppDimen.H_DIMEN_300,
+                      child: Card(
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            AppDimen.H_DIMEN_25,
+                          ),
+                        ),
+                        elevation: 2,
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            left: AppDimen.H_DIMEN_15,
+                            right: AppDimen.H_DIMEN_10,
+                            top: AppDimen.V_DIMEN_5,
+                            bottom: AppDimen.V_DIMEN_8,
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+//                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisSize: MainAxisSize.max,
+                            children: <Widget>[
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.undo,
+                                    size: AppDimen.TEXT_SIZE_26,
+                                  ),
+                                  Text(
+                                    "Undo",
+                                    style: TextStyle(
+                                      fontSize: AppDimen.TEXT_SIZE_15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              AppSpacing.horizontalSpace(
+                                AppDimen.H_DIMEN_20,
+                              ),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.edit_attributes,
+                                    size: AppDimen.TEXT_SIZE_26,
+                                  ),
+                                  Text(
+                                    "Erase",
+                                    style: TextStyle(
+                                      fontSize: AppDimen.TEXT_SIZE_15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              AppSpacing.horizontalSpace(AppDimen.H_DIMEN_20,),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.format_underlined,
+                                    size: AppDimen.TEXT_SIZE_26,
+                                  ),
+                                  Text(
+                                    "Underline",
+                                    style: TextStyle(
+                                      fontSize: AppDimen.TEXT_SIZE_15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              AppSpacing.horizontalSpace(AppDimen.H_DIMEN_20),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.fiber_manual_record,
+                                    size: AppDimen.TEXT_SIZE_26,
+                                  ),
+                                  Text(
+                                    "Highlight",
+                                    style: TextStyle(
+                                      fontSize: AppDimen.TEXT_SIZE_15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    AppSpacing.verticalSpace(
+                      AppDimen.V_DIMEN_10,
+                    ),
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        height: AppDimen.V_DIMEN_70,
+                        width: double.infinity,
+                        child: Card(
+                          color: AppColor.colorLoginScreenButton,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(AppDimen.H_DIMEN_15)),
+                          elevation: 2,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(left: AppDimen.H_DIMEN_100),
+                                child: Text(
+                                  "Transfer file",
+                                  style: TextStyle(
+                                    color: AppColor.colorLoginButtonText,
+                                    fontSize: AppDimen.TEXT_SIZE_24,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  right: AppDimen.H_DIMEN_10,
+                                ),
+                                child: CircleAvatar(
+                                  radius: AppDimen.H_DIMEN_25,
+                                  backgroundColor: AppColor.colorLoginButtonCircle,
+                                  child: Icon(
+                                    Icons.arrow_forward,
+                                    color: AppColor.colorLoginButtonText,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               )
             ],

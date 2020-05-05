@@ -4,6 +4,7 @@ import 'package:smartnotestest/ui/helper/route_animation.dart';
 import 'package:smartnotestest/ui/views/edit_stagging.dart';
 import 'package:smartnotestest/ui/views/login_view.dart';
 import 'package:smartnotestest/ui/views/my_profile_view.dart';
+import 'package:smartnotestest/ui/views/notes_library.dart';
 import 'package:smartnotestest/ui/views/signup.dart';
 import 'package:smartnotestest/ui/views/splash_screen.dart';
 import 'package:smartnotestest/ui/views/stagging_views.dart';
@@ -45,6 +46,7 @@ class Router {
   static const String ROUTE_TEXT_EDITING = "text_editing";
   static const String ROUTE_STAGGING = "stagging";
   static const String ROUTE_EDIT_STAGGING = "edit_stagging";
+  static const String ROUTE_NOTES_LIBRARY = "notes_library";
 
   static String ROUTE_CURRENT = "/";
 
@@ -76,6 +78,10 @@ class Router {
 
       case ROUTE_EDIT_STAGGING:
         currentWidget = EditStagging();
+        break;
+
+      case ROUTE_NOTES_LIBRARY:
+        currentWidget = NotesLibrary();
         break;
 
 //      case ROUTE_NOTIFICATION_DETAILS:

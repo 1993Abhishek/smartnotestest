@@ -8,13 +8,15 @@ class AppDimen {
   static final double H_DIMEN_270 = 69.10 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_260 = 65.10 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_250 = 59.10 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_240 = 55.10 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_210 = 50.10 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_200 = 47.28 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_180 = 42.55 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_170 = 40.20 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_160 = 37.82 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_150 = 35.46 * SizeConfig.safeBlockHorizontal;
-  static final double H_DIMEN_130 = 28.57 * SizeConfig.safeBlockHorizontal;
-  static final double H_DIMEN_140 = 28.57 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_140 = 32.57 * SizeConfig.safeBlockHorizontal;
+  static final double H_DIMEN_130 = 30.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_120 = 28.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_115 = 27.57 * SizeConfig.safeBlockHorizontal;
   static final double H_DIMEN_100 = 23.64 * SizeConfig.safeBlockHorizontal;

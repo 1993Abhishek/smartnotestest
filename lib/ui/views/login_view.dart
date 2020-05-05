@@ -12,11 +12,11 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
-
-  bool routeProfile= false;
-  bool routeStaging= false;
-  bool routeEditing= false;
-  bool routeEditStaging= false;
+  bool routeProfile = false;
+  bool routeStaging = false;
+  bool routeEditing = false;
+  bool routeEditStaging = false;
+  bool routeNotesLibrary = false;
 
   Future<void> _showChoiceDialogue(BuildContext context) async {
     return showDialog(
@@ -57,11 +57,14 @@ class _LogInState extends State<LogIn> {
                       ),
                     ),
                     onTap: () {
-                      if(!routeStaging && !routeEditing && !routeProfile)
-                        {
-                          dispose();
-                          routeProfile = true;
-                        }
+                      if (!routeStaging &&
+                          !routeEditing &&
+                          !routeProfile &&
+                          !routeEditStaging &&
+                          !routeNotesLibrary) {
+                        dispose();
+                        routeProfile = true;
+                      }
                       Navigator.of(context).pushNamed(Router.ROUTE_MY_PROFILE);
                     },
                   ),
@@ -86,8 +89,11 @@ class _LogInState extends State<LogIn> {
                       ),
                     ),
                     onTap: () {
-                      if(!routeStaging && !routeEditing && !routeProfile)
-                      {
+                      if (!routeStaging &&
+                          !routeEditing &&
+                          !routeProfile &&
+                          !routeEditStaging &&
+                          !routeNotesLibrary) {
                         dispose();
                         routeStaging = true;
                       }
@@ -115,12 +121,16 @@ class _LogInState extends State<LogIn> {
                       ),
                     ),
                     onTap: () {
-                      if(!routeStaging && !routeEditing && !routeProfile)
-                      {
+                      if (!routeStaging &&
+                          !routeEditing &&
+                          !routeProfile &&
+                          !routeEditStaging &&
+                          !routeNotesLibrary) {
                         dispose();
                         routeEditing = true;
                       }
-                      Navigator.of(context).pushNamed(Router.ROUTE_TEXT_EDITING);
+                      Navigator.of(context)
+                          .pushNamed(Router.ROUTE_TEXT_EDITING);
                     },
                   ),
                   AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
@@ -144,12 +154,49 @@ class _LogInState extends State<LogIn> {
                       ),
                     ),
                     onTap: () {
-                      if(!routeStaging && !routeEditing && !routeProfile && !routeEditStaging)
-                      {
+                      if (!routeStaging &&
+                          !routeEditing &&
+                          !routeProfile &&
+                          !routeEditStaging &&
+                          !routeNotesLibrary) {
                         dispose();
                         routeEditStaging = true;
                       }
-                      Navigator.of(context).pushNamed(Router.ROUTE_EDIT_STAGGING);
+                      Navigator.of(context)
+                          .pushNamed(Router.ROUTE_EDIT_STAGGING);
+                    },
+                  ),
+                  AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                  GestureDetector(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+//                      color: Colors.blueAccent,
+                      width: AppDimen.H_DIMEN_50,
+                      height: AppDimen.V_DIMEN_30,
+                      child: Center(
+                        child: Text(
+                          "Notes Library",
+                          style: TextStyle(
+                            fontSize: AppDimen.TEXT_SIZE_15,
+                            color: AppColor.colorProfiletext,
+                          ),
+                        ),
+                      ),
+                    ),
+                    onTap: () {
+                      if (!routeStaging &&
+                          !routeEditing &&
+                          !routeProfile &&
+                          !routeEditStaging &&
+                          !routeNotesLibrary) {
+                        dispose();
+                        routeNotesLibrary = true;
+                      }
+                      Navigator.of(context)
+                          .pushNamed(Router.ROUTE_NOTES_LIBRARY);
                     },
                   ),
                 ],
@@ -179,10 +226,10 @@ class _LogInState extends State<LogIn> {
       backgroundColor: AppColor.colorLoginScreen,
       body: Padding(
         padding: EdgeInsets.only(
-          left: AppDimen.H_DIMEN_25,
-          top: AppDimen.V_DIMEN_30,
+          left: AppDimen.H_DIMEN_20,
+          top: AppDimen.V_DIMEN_50,
           right: AppDimen.H_DIMEN_25,
-          bottom: AppDimen.V_DIMEN_25,
+          bottom: AppDimen.V_DIMEN_10,
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -205,86 +252,103 @@ class _LogInState extends State<LogIn> {
                 ),
               ),
               AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              Image(
-                image: AssetImage("assets/LogIn_crop.jpg"),
-              ),
-//            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              SmartTextField(
-                cursorColor: AppColor.colorLoginScreenText,
-                isButton: false,
-                focusNode: phone_node,
-                textEditingController: phone_email_controller,
-                underlineColor: Colors.blue,
-                prefixWidget: Text(
-                  "Email_id",
-                  style: TextStyle(
-                      fontSize: AppDimen.TEXT_SIZE_16,
-                      color: AppColor.colorLoginScreenText),
-                ),
-              ),
-              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              SmartTextField(
-                cursorColor: AppColor.colorLoginScreenText,
-                isButton: false,
-                focusNode: phone_node,
-                textEditingController: phone_email_controller,
-                underlineColor: Colors.blue,
-                prefixWidget: Text(
-                  "Password",
-                  style: TextStyle(
-                      fontSize: AppDimen.TEXT_SIZE_16,
-                      color: AppColor.colorLoginScreenText),
-                ),
-              ),
-              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
               Padding(
-                padding: EdgeInsets.only(left: AppDimen.H_DIMEN_170),
-                child: Text(
-                  "Forgot Password ?",
-                  style: TextStyle(
-                    fontSize: AppDimen.TEXT_SIZE_16,
-                    color: AppColor.colorLoginScreenButton,
-                  ),
+                padding: EdgeInsets.only(
+                  left: AppDimen.H_DIMEN_10,
+                  right: AppDimen.H_DIMEN_10,
                 ),
-              ),
-              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              SmartTextField(
-                isButton: true,
-                focusNode: button_node,
-                isButtonwidget: true,
-                textEditingController: button_controller,
-                buttonText: "LOGIN",
-                onTap: ()
-                {
+                child: Column(
+                  children: <Widget>[
+                    Image(
+                      image: AssetImage("assets/LogIn_crop.jpg"),
+                    ),
+//            AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                    SmartTextField(
+                      cursorColor: AppColor.colorLoginScreenText,
+                      isButton: false,
+                      focusNode: phone_node,
+                      textEditingController: phone_email_controller,
+                      underlineColor: Colors.blue,
+                      prefixWidget: Text(
+                        "Email id",
+                        style: TextStyle(
+                            fontSize: AppDimen.TEXT_SIZE_16,
+                            color: AppColor.colorLoginScreenText),
+                      ),
+                      onSubmitted: (value) {
+                        phone_node.unfocus();
+                        password_node.requestFocus();
+                      },
+                    ),
+                    AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                    SmartTextField(
+                      cursorColor: AppColor.colorLoginScreenText,
+                      isButton: false,
+                      focusNode: password_node,
+                      textEditingController: password_controller,
+                      underlineColor: Colors.blue,
+                      prefixWidget: Text(
+                        "Password",
+                        style: TextStyle(
+                            fontSize: AppDimen.TEXT_SIZE_16,
+                            color: AppColor.colorLoginScreenText),
+                      ),
+                      onSubmitted: (value) {
+                        password_node.unfocus();
+                        button_node.requestFocus();
+                      },
+                    ),
+                    AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                    Padding(
+                      padding: EdgeInsets.only(left: AppDimen.H_DIMEN_200),
+                      child: Text(
+                        "Forgot Password ?",
+                        style: TextStyle(
+                          fontSize: AppDimen.TEXT_SIZE_16,
+                          color: AppColor.colorLoginScreenButton,
+                        ),
+                      ),
+                    ),
+                    AppSpacing.verticalSpace(AppDimen.V_DIMEN_20),
+                    SmartTextField(
+                      isButton: true,
+                      focusNode: button_node,
+                      isButtonwidget: true,
+                      textEditingController: button_controller,
+                      buttonText: "LOGIN",
+                      onTap: () {
 //                  dispose();
-                  _showChoiceDialogue(context);
+                        _showChoiceDialogue(context);
 //                Navigator.of(context).pushNamed(Router.ROUTE_MY_PROFILE);
 //                  Navigator.of(context).pushNamed(Router.ROUTE_TEXT_EDITING);
 //                  Navigator.of(context).pushNamed(Router.ROUTE_STAGGING);
-                },
-              ),
-              AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
-              Center(
-                child: Text(
-                  "Dont have an account?",
-                  style: TextStyle(
-                      color: AppColor.colorLoginText1,
-                      fontSize: AppDimen.TEXT_SIZE_18),
-                ),
-              ),
-              AppSpacing.verticalSpace(AppDimen.V_DIMEN_5),
-              Center(
-                child: GestureDetector(
-                  child: Text(
-                    "SIGNUP",
-                    style: TextStyle(
-                        color: AppColor.colorLoginText2,
-                        fontSize: AppDimen.TEXT_SIZE_18),
-                  ),
-                  onTap: () {
-                    Navigator.of(context)
-                        .pushReplacementNamed(Router.ROUTE_REGISTRATION);
-                  },
+                      },
+                    ),
+                    AppSpacing.verticalSpace(AppDimen.V_DIMEN_10),
+                    Center(
+                      child: Text(
+                        "Dont have an account?",
+                        style: TextStyle(
+                            color: AppColor.colorLoginText1,
+                            fontSize: AppDimen.TEXT_SIZE_18),
+                      ),
+                    ),
+                    AppSpacing.verticalSpace(AppDimen.V_DIMEN_5),
+                    Center(
+                      child: GestureDetector(
+                        child: Text(
+                          "SIGNUP",
+                          style: TextStyle(
+                              color: AppColor.colorLoginText2,
+                              fontSize: AppDimen.TEXT_SIZE_18),
+                        ),
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushReplacementNamed(Router.ROUTE_REGISTRATION);
+                        },
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

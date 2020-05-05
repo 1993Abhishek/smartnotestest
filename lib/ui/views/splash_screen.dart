@@ -64,16 +64,16 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(AppDimen.V_DIMEN_30),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: CircularProgressIndicator(
-                  valueColor:
-                  AlwaysStoppedAnimation<Color>(AppColor.colorPrimary),
-                ),
-              ),
-            )
+//            Container(
+//              padding: EdgeInsets.all(AppDimen.V_DIMEN_30),
+//              child: Align(
+//                alignment: Alignment.bottomCenter,
+//                child: CircularProgressIndicator(
+//                  valueColor:
+//                  AlwaysStoppedAnimation<Color>(AppColor.colorPrimary),
+//                ),
+//              ),
+//            )
           ],
         ));
   }

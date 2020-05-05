@@ -103,41 +103,35 @@ class _SmartTextFieldState extends State<SmartTextField> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(AppDimen.H_DIMEN_15)),
                 elevation: 2,
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    left: AppDimen.H_DIMEN_35,
-                    top: AppDimen.H_DIMEN_15,
-                    bottom: AppDimen.H_DIMEN_10,
-                  ),
-                  child: Stack(
-                    fit: StackFit.loose,
-                    overflow: Overflow.visible,
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(left:AppDimen.H_DIMEN_100, top: AppDimen.V_DIMEN_5,),
-                          child: Text(
-                            widget.buttonText,
-                            style: TextStyle(
-                              color: AppColor.colorLoginButtonText,
-                              fontSize: AppDimen.TEXT_SIZE_24,
-                            ),
-                          ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(left: AppDimen.H_DIMEN_140),
+                      child: Text(
+                        widget.buttonText,
+                        style: TextStyle(
+                          color: AppColor.colorLoginButtonText,
+                          fontSize: AppDimen.TEXT_SIZE_24,
                         ),
-                      widget.isButtonwidget
-                          ? Padding(
-                            padding: EdgeInsets.only(left:AppDimen.H_DIMEN_260),
+                      ),
+                    ),
+                    widget.isButtonwidget
+                        ? Padding(
+                            padding: EdgeInsets.only(
+                              right: AppDimen.H_DIMEN_10,
+                            ),
                             child: CircleAvatar(
-                                radius: AppDimen.H_DIMEN_30,
-                                backgroundColor: AppColor.colorLoginButtonCircle,
-                                child: Icon(
-                                  Icons.arrow_forward,
-                                  color: AppColor.colorLoginButtonText,
-                                ),
+                              radius: AppDimen.H_DIMEN_25,
+                              backgroundColor: AppColor.colorLoginButtonCircle,
+                              child: Icon(
+                                Icons.arrow_forward,
+                                color: AppColor.colorLoginButtonText,
                               ),
+                            ),
                           )
-                          : Container()
-                    ],
-                  ),
+                        : Container()
+                  ],
                 ),
               ),
             ),
