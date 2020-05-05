@@ -33,7 +33,7 @@ class _StaggingViewState extends State<StaggingView> {
         padding: EdgeInsets.only(
           left: AppDimen.H_DIMEN_20,
           right: AppDimen.H_DIMEN_20,
-          top: AppDimen.V_DIMEN_20,
+          top: AppDimen.V_DIMEN_35,
           bottom: AppDimen.V_DIMEN_15,
         ),
         child: Column(
@@ -52,10 +52,15 @@ class _StaggingViewState extends State<StaggingView> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
-                  Icon(
-                    Icons.dehaze,
-                    color: AppColor.colorProfileHd1,
-                    size: AppDimen.TEXT_SIZE_35,
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: AppDimen.V_DIMEN_2,
+                    ),
+                    child: Icon(
+                      Icons.dehaze,
+                      color: AppColor.colorProfileHd1,
+                      size: AppDimen.TEXT_SIZE_35,
+                    ),
                   ),
                   Text(
                     "Stagging",
@@ -64,12 +69,17 @@ class _StaggingViewState extends State<StaggingView> {
                       color: AppColor.colorProfileHd1,
                     ),
                   ),
-                  GestureDetector(
-                    onTap: getImage,
-                    child: Icon(
-                      Icons.camera_alt,
-                      color: AppColor.colorProfileHd1,
-                      size: AppDimen.TEXT_SIZE_35,
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: AppDimen.V_DIMEN_5,
+                    ),
+                    child: GestureDetector(
+                      onTap: getImage,
+                      child: Icon(
+                        Icons.camera_alt,
+                        color: AppColor.colorProfileHd1,
+                        size: AppDimen.TEXT_SIZE_35,
+                      ),
                     ),
                   ),
                 ],
