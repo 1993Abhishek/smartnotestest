@@ -61,7 +61,7 @@ class _NotesLibraryState extends State<NotesLibrary> {
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(
-              top: AppDimen.V_DIMEN_30,
+              top: AppDimen.V_DIMEN_35,
               left: AppDimen.H_DIMEN_10,
               right: AppDimen.H_DIMEN_10,
             ),
@@ -76,11 +76,14 @@ class _NotesLibraryState extends State<NotesLibrary> {
                     size: AppDimen.H_DIMEN_30,
                   ),
                 ),
-                Text(
-                  "Notes Library",
-                  style: TextStyle(
-                    color: AppColor.colorProfileHd1,
-                    fontSize: AppDimen.TEXT_SIZE_30,
+                Padding(
+                  padding: EdgeInsets.only(top:AppDimen.V_DIMEN_5,),
+                  child: Text(
+                    "Notes Library",
+                    style: TextStyle(
+                      color: AppColor.colorProfileHd1,
+                      fontSize: AppDimen.TEXT_SIZE_30,
+                    ),
                   ),
                 ),
                 IconButton(
