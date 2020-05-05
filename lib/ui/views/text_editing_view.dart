@@ -49,7 +49,7 @@ class _TextEditingState extends State<TextEditing> {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(
-                  top: AppDimen.V_DIMEN_30,
+                  top: AppDimen.V_DIMEN_40,
                   left: AppDimen.H_DIMEN_10,
                   right: AppDimen.H_DIMEN_10,
                   bottom: AppDimen.V_DIMEN_10,
@@ -75,9 +75,12 @@ class _TextEditingState extends State<TextEditing> {
                         ),
                       ),
                     ),
-                    Text(
-                      "Text Editor",
-                      style: TextStyle(fontSize: AppDimen.TEXT_SIZE_35),
+                    Padding(
+                      padding: EdgeInsets.only(top:AppDimen.V_DIMEN_8,),
+                      child: Text(
+                        "Text Editor",
+                        style: TextStyle(fontSize: AppDimen.TEXT_SIZE_35),
+                      ),
                     ),
                     FlatButton(
                       onPressed: () {},
